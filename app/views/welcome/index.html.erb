@@ -1,0 +1,6 @@
+<% if current_user %>
+  Hi, <%= current_user.name %>
+  <%= link_to "登出", destroy_user_session_path, :method => :delete %></a>
+<% else %>
+ <%= link_to "登入", new_user_session_path %></a>
+<% end %>

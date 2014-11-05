@@ -1,0 +1,13 @@
+defaults: &defaults
+  omniauth_facebook: 
+    app_id: '583963241750288'
+    app_secret: ''
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

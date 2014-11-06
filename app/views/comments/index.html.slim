@@ -1,0 +1,22 @@
+h1 列出所有留言
+
+table class="table"
+  thead
+    tr
+      th 留言者
+      th 內容
+      th colspan="3"
+
+
+  tbody
+    - @comments.each do |comment| 
+      tr
+        td = comment.user.name
+        td = comment.content
+        td = link_to '顯示', photo_comment_path(@photo, comment), class: "btn"
+        td = link_to '修改', edit_photo_comment_path(@photo, comment), class: "btn"
+        td = link_to '刪除', photo_comment_path(@photo, comment), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn"
+
+br
+
+= link_to '新增留言', new_photo_comment_path(@photo), class: "btn"

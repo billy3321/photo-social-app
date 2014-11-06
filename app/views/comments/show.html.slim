@@ -1,0 +1,12 @@
+p id="notice" = notice
+
+p
+  strong 留言者
+  br
+  = @comment.user.name
+p
+  = @comment.content
+
+
+= link_to '修改留言', edit_photo_comment_path(@photo, @comment), class: "btn"
+= link_to 'Back', photo_comments_path(@photo), class: "btn"

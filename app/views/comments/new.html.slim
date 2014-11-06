@@ -1,0 +1,6 @@
+h1 新增產品
+
+= simple_form_for(@comment, url: photo_comments_path ,html: {class: 'form-horizontal center' }) do |f|
+  = render :partial => 'form', :locals => { :f => f }
+
+= link_to 'Back', photo_comments_path(@photo), class: "btn"
